@@ -1,6 +1,16 @@
 spring:
   application: 
     name: gateway
+  cloud:
+    gateway:
+      httpserver:
+        wiretap: true
 
 server:
   port: 8100
+
+logging:
+  level:
+    '[org.springframework.web.HttpLogging]': INFO
+    '[reactor.netty.http.server]': INFO
+    '[reactor.netty.http.client]': INFO
